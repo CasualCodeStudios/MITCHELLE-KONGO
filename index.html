@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mitchelle Kongo — AGED | Agricultural Officer & Educator</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="mainstyles.css">
+
+</head>
+<body>
+
+<div class="cursor" id="cursor"></div>
+<div class="cursor-follower" id="cursorFollower"></div>
+
+<!-- SPIN BADGE -->
+<div class="spin-badge" aria-hidden="true">
+  <svg viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <circle cx="40" cy="40" r="38" stroke="var(--terra)" stroke-width="1.5" stroke-dasharray="4 4"/>
+    <path d="M40,5 A35,35 0 1,1 39.9,5" fill="none" id="circlePath"/>
+    <text font-size="7.5" fill="var(--terra)" font-family="DM Sans,sans-serif" letter-spacing="3.5" font-weight="500">
+      <textPath href="#circlePath">AGED · NAIROBI · KABETE ·</textPath>
+    </text>
+  </svg>
+  <div class="center-dot"></div>
+</div>
+
+<!-- NAV -->
+<nav id="mainNav">
+  <a href="#" class="nav-logo">M<span>.</span>K</a>
+  <ul class="nav-links">
+    <li><a href="#about">About</a></li>
+    <li><a href="#agriculture">Agriculture</a></li>
+    <li><a href="#education">Education</a></li>
+    <li><a href="#experience">Experience</a></li>
+    <li><a href="#life">Life</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+  <button class="nav-toggle" id="navToggle" aria-label="Open menu">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+<nav class="nav-drawer" id="navDrawer" aria-label="Mobile menu">
+  <a href="#about"       onclick="closeDrawer()">About</a>
+  <a href="#agriculture" onclick="closeDrawer()">Agriculture</a>
+  <a href="#education"   onclick="closeDrawer()">Education</a>
+  <a href="#experience"  onclick="closeDrawer()">Experience</a>
+  <a href="#life"        onclick="closeDrawer()">Life</a>
+  <a href="#contact"     onclick="closeDrawer()">Contact</a>
+</nav>
+
+<!-- HERO -->
+<section id="hero">
+  <div class="hero-left">
+    <span class="hero-tag">Agricultural Officer · Educator · AG-ED</span>
+    <h1 class="hero-name">Mitchelle<span class="last accent">Kongo</span></h1>
+    <p class="hero-subtitle">Agricultural Officer. Educator. Field Practitioner. Born curious, raised purposeful and 'locally' — growing Kenya from the ground up.</p>
+    <div class="hero-badges">
+      <span class="badge"><span><img src="student.png" alt="agricultural student icon"></span> AG-ED STUDENT</span>
+      <span class="badge terra"><span><img src="presentation.png" alt="Educator or teacher icon"></span> Educator</span>
+      <span class="badge gold"><span><img src="graduation.png" alt="schooling icon"></span> UoN Kabete</span>
+    </div>
+    <div class="hero-cta">
+      <a href="#about" class="btn-primary">Discover Her Story</a>
+      <a href="#contact" class="btn-outline">Get in Touch</a>
+    </div>
+  </div>
+  <div class="hero-right">
+    <div class="hero-image-wrap">
+      <div class="img-placeholder img-ph-green" style="height:100%;">
+        <img src="" alt="Her hero section poster">
+      </div>
+      <div class="hero-image-overlay"></div>
+    </div>
+    <div class="hero-decor"></div>
+    <div class="hero-stats">
+      <div class="stat-item"><div class="stat-num">AG-ED</div><div class="stat-label">Agricultural &amp; Education</div></div>
+      <div class="stat-item"><div class="stat-num">UoN</div><div class="stat-label">Kabete Campus</div></div>
+      <div class="stat-item"><div class="stat-num">Nairobi</div><div class="stat-label">Based In</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- TICKER -->
+<div class="ticker-wrap" aria-hidden="true">
+  <div class="ticker">AGRICULTURAL OFFICER <span>✦</span> EDUCATOR <span>✦</span> FIELD SPECIALIST <span>✦</span> UON KABETE <span>✦</span> NAIROBI <span>✦</span> AGED GRADUATE <span>✦</span> KISII ROOTS <span>✦</span> GROUNDED IN PURPOSE <span>✦</span> AGRICULTURAL OFFICER <span>✦</span> EDUCATOR <span>✦</span> FIELD SPECIALIST <span>✦</span> UON KABETE <span>✦</span> NAIROBI <span>✦</span> AGED GRADUATE <span>✦</span> KISII ROOTS <span>✦</span> GROUNDED IN PURPOSE <span>✦</span></div>
+</div>
+
+<!-- ABOUT -->
+<section id="about">
+  <div class="about-grid">
+    <div class="about-img-stack reveal">
+      <div class="about-img-main"><div class="img-placeholder img-ph-blush">Portrait</div></div>
+      <div class="about-img-accent"><div class="img-placeholder img-ph-sage">Field</div></div>
+      <div class="about-decor-box"></div>
+    </div>
+    <div class="about-text reveal">
+      <span class="section-label">Who She Is</span>
+      <h2 class="section-title">About <em>Mitchelle</em></h2>
+      <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Reprehenderit quas possimus libero, eaque animi unde! Eius aliquid sed earum quae! Sint velit rerum ipsam totam explicabo aperiam ipsum dolore odit fugit officia doloribus, odio eius blanditiis, ipsa error! Ex et id illum omnis dolorum ipsum fugiat vero, magni autem. Corrupti.</p>
+      <div class="about-pills">
+        <span class="pill"><span><img src="" alt="agronomy"></span> Agronomy</span>
+        <span class="pill"><span><img src="" alt="education icon"></span> Extension Education</span>
+        <span class="pill"><span><img src="" alt="home or heritage"></span> Kisii Heritage</span>
+        <span class="pill"><span><img src="" alt="faith or church day icon"></span> Sarturday Faithful</span>
+        <span class="pill"><span><img src="" alt="Junk food or street food"></span> Junk Food Enthusiast</span>
+        <span class="pill"><span><img src="" alt="hiking icon"></span> Long Walk Lover</span>
+      </div>
+      <div class="about-cards">
+        <div class="about-card" onclick="openModal('agri')"><h4><span><img src="" alt="agricultural icon"></span> Agricultural Journey</h4><p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Vitae, sint?</p></div>
+        <div class="about-card terra" onclick="openModal('edu')"><h4><span><img src="" alt="education icon or studying icon"></span> Education Story</h4><p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Laborum, rem?.</p></div>
+      </div>
+      <a href="#agriculture" class="about-more">Explore Her Full Story</a>
+    </div>
+  </div>
+</section>
+
+<!-- AGRICULTURE -->
+<section id="agriculture">
+  <div class="agri-bg-text" aria-hidden="true">GROW</div>
+  <div class="agri-inner">
+    <div class="agri-header reveal">
+      <div><span class="section-label">Fields &amp; Farms</span><h2 class="section-title">The <em>Agriculture</em><br>Journey</h2></div>
+      <p class="agri-intro">"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Omnis quaerat possimus doloremque consequuntur cumque, ad modi commodi eum doloribus laborum!."</p>
+    </div>
+    <div class="agri-timeline">
+      <div class="timeline-item"><div class="timeline-year">The Beginning</div><div class="timeline-title">Growing Up Around Green</div><p class="timeline-desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint nulla labore cumque dolor mollitia, quisquam esse dolorem quam modi repellendus, iure, expedita iusto ipsum?</p></div>
+      <div class="timeline-item"><div class="timeline-year">University Years</div><div class="timeline-title">AGED Programme — University of Nairobi, Kabete Campus</div><p class="timeline-desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla ex, natus obcaecati repudiandae quos recusandae rem voluptatem minus voluptates nisi et ut rerum sapiente debitis..</p></div>
+      <div class="timeline-item"><div class="timeline-year">Field Attachments</div><div class="timeline-title">Boots in the Soil — Attachment Experience</div><p class="timeline-desc">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laudantium est quaerat hic quos. Mollitia, est assumenda, ipsum error ullam ipsam debitis veritatis fugit vitae nobis repudiandae sequi delectus! Officiis, corrupti?.</p></div>
+      <div class="timeline-item"><div class="timeline-year">Today</div><div class="timeline-title">Agricultural Officer — Nairobi Region</div><p class="timeline-desc">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Recusandae molestiae ea eaque accusamus reiciendis. Veritatis vero harum obcaecati adipisci, maxime cumque beatae dolor impedit est reprehenderit? Doloribus voluptatem at sunt..</p></div>
+    </div>
+    <div class="agri-gallery">
+      <div class="agri-gal-item"><div class="img-placeholder img-ph-green">Soil Testing</div><div class="gal-caption"><p>Soil Analysis Field Work</p></div></div>
+      <div class="agri-gal-item"><div class="img-placeholder img-ph-sage">Crop Trials</div><div class="gal-caption"><p>Crop Variety Trials</p></div></div>
+      <div class="agri-gal-item"><div class="img-placeholder img-ph-terra">Farmer Training</div><div class="gal-caption"><p>Smallholder Farmer Training</p></div></div>
+      <div class="agri-gal-item"><div class="img-placeholder img-ph-gold">Field Visit</div><div class="gal-caption"><p>Extension Field Visit</p></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- EDUCATION -->
+<section id="education">
+  <div class="edu-inner">
+    <div class="reveal"><span class="section-label">Teaching &amp; Extension</span><h2 class="section-title">The <em>Education</em> Path</h2></div>
+    <div class="edu-grid">
+      <div class="edu-card-stack">
+        <div class="edu-card reveal"><div class="edu-card-tag">Academic Foundation</div><h3>AGED — Agricultural Education &amp; Extension</h3><p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dicta odit quibusdam, consequatur nemo doloremque odio veritatis sint accusantium nihil quos?</p></div>
+        <div class="edu-card reveal"><div class="edu-card-tag">Extension Work</div><h3>Classroom to Fieldroom</h3><p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nesciunt amet laudantium veritatis natus, porro minima consequatur eos at reprehenderit voluptates, magnam ut ab libero incidunt quae pariatur? Necessitatibus nobis voluptatum amet eaque nihil? Placeat, in.</p></div>
+        <div class="edu-card reveal"><div class="edu-card-tag">Mentorship</div><h3>Inspiring the Next Harvest</h3><p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ipsam suscipit hic obcaecati consequatur? Error, maxime praesentium! Odit dolore expedita hic quos placeat vel odio alias?</p></div>
+      </div>
+      <div class="edu-right reveal">
+        <blockquote class="big-quote">"Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam necessitatibus consequatur velit aperiam autem consectetur harum saepe distinctio quidem sunt! "</blockquote>
+        <div class="edu-skills">
+          <h4>Core Competencies</h4>
+          <div class="skill-bar-wrap"><div class="skill-bar-label"><span>Agronomy &amp; Crop Science</span><span>92%</span></div><div class="skill-bar-track"><div class="skill-bar-fill" data-width="92"></div></div></div>
+          <div class="skill-bar-wrap"><div class="skill-bar-label"><span>Agricultural Extension Education</span><span>88%</span></div><div class="skill-bar-track"><div class="skill-bar-fill" data-width="88"></div></div></div>
+          <div class="skill-bar-wrap"><div class="skill-bar-label"><span>Soil Science &amp; Land Management</span><span>85%</span></div><div class="skill-bar-track"><div class="skill-bar-fill" data-width="85"></div></div></div>
+          <div class="skill-bar-wrap"><div class="skill-bar-label"><span>Farmer Training &amp; Facilitation</span><span>90%</span></div><div class="skill-bar-track"><div class="skill-bar-fill" data-width="90"></div></div></div>
+          <div class="skill-bar-wrap"><div class="skill-bar-label"><span>Sustainable Agriculture Practices</span><span>87%</span></div><div class="skill-bar-track"><div class="skill-bar-fill" data-width="87"></div></div></div>
+        </div>
+        <div class="edu-gallery">
+          <div class="edu-gal-item"><div class="img-placeholder img-ph-green">Class</div></div>
+          <div class="edu-gal-item"><div class="img-placeholder img-ph-blush">Lab</div></div>
+          <div class="edu-gal-item"><div class="img-placeholder img-ph-sage">Demo</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- EXPERIENCE -->
+<section id="experience">
+  <div class="exp-inner">
+    <div class="reveal"><span class="section-label">Attachments &amp; Practice</span><h2 class="section-title">Field <em>Experience</em></h2></div>
+    <div class="exp-grid">
+      <div class="exp-card"><div class="exp-card-num">01</div><div class="exp-card-tag">Industrial Attachment</div><h3>County Government — Agricultural Dept.</h3><p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Enim perspiciatis nobis dolor architecto, eaque numquam? Ducimus, earum commodi. Tenetur, similique odit esse libero eaque autem!</p></div>
+      <div class="exp-card"><div class="exp-card-num">02</div><div class="exp-card-tag">Research Attachment</div><h3>UoN Kabete Research Farm</h3><p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quibusdam numquam illum mollitia similique iure esse necessitatibus facere tempora, maxime, illo inventore suscipit quod soluta quae!</p></div>
+      <div class="exp-card"><div class="exp-card-num">03</div><div class="exp-card-tag">Community Extension</div><h3>Peri-Urban Nairobi Farmers</h3><p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Error molestiae voluptatum, provident odio ab nulla voluptas adipisci incidunt consectetur minima, inventore reprehenderit labore vel doloribus?.</p></div>
+      <div class="exp-card"><div class="exp-card-num">04</div><div class="exp-card-tag">School Visits</div><h3>Secondary School Ag. Programme</h3><p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laudantium quo deserunt voluptate assumenda cum reprehenderit esse pariatur, reiciendis dolores, libero numquam! Aut dignissimos voluptatibus ad!</p></div>
+      <div class="exp-card"><div class="exp-card-num">05</div><div class="exp-card-tag">Part-Time Practice</div><h3>Agri-Officer — Nairobi Metro</h3><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo vitae sequi labore atque libero ex adipisci numquam, amet magnam magni eum nesciunt excepturi temporibus maiores!.</p></div>
+      <div class="exp-card"><div class="exp-card-num">06</div><div class="exp-card-tag">Life Lessons</div><h3>The School of Daily Living</h3><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil dicta ipsa voluptatibus delectus minus, a distinctio accusamus cumque perspiciatis repellat odit sit? Nostrum, saepe fugiat!.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- LIFE -->
+<section id="life">
+  <div class="life-inner">
+    <div class="life-header reveal"><span class="section-label">The Unofficial Side</span><h2 class="section-title">Daily <em>Life</em></h2></div>
+    <div class="life-big-grid reveal">
+      <div class="life-item"><div class="img-placeholder img-ph-terra">Friends</div><div class="life-overlay"><p>"Hanging with her people — the ones who know the real Mitchelle."</p></div></div>
+      <div class="life-item"><div class="img-placeholder img-ph-blush">Church</div><div class="life-overlay"><p>"Saturday church — non-negotiable, rain or shine."</p></div></div>
+      <div class="life-item"><div class="img-placeholder img-ph-green">Walk</div><div class="life-overlay"><p>"Long walks that clear the mind — the city is her treadmill."</p></div></div>
+      <div class="life-item"><div class="img-placeholder img-ph-gold">Junk</div><div class="life-overlay"><p>"Junk food is a love language."</p></div></div>
+      <div class="life-item"><div class="img-placeholder img-ph-sage">Nap</div><div class="life-overlay"><p>"Naptime is sacred. Disturb at your own risk."</p></div></div>
+      <div class="life-item"><div class="img-placeholder img-ph-dark">Family</div><div class="life-overlay"><p>"Family first — always, every time."</p></div></div>
+    </div>
+    <div class="life-quotes">
+      <div class="lq-item"><span class="lq-emoji"><img src="" alt="long walks"></span><p>"Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ullam consequuntur consequatur nesciunt?."</p></div>
+      <div class="lq-item"><span class="lq-emoji"><img src="" alt="church day"></span><p>"Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aperiam tenetur distinctio accusamus? "</p></div>
+      <div class="lq-item"><span class="lq-emoji"><img src="" alt="junky food"></span><p>"Lorem, ipsum dolor sit amet consectetur adipisicing elit. Hic sit exercitationem optio! "</p></div>
+      <div class="lq-item"><span class="lq-emoji"><img src="" alt="sleepyhead"></span><p>"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vitae ducimus quibusdam officia.."</p></div>
+      <div class="lq-item"><span class="lq-emoji"><img src="" alt="long drives naah!!"></span><p>"Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore perferendis quaerat nobis. "</p></div>
+      <div class="lq-item"><span class="lq-emoji"><img src="" alt="family"></span><p>"Lorem ipsum dolor sit, amet consectetur adipisicing elit. Vitae voluptas molestiae corrupti? "</p></div>
+    </div>
+    <div class="life-traits">
+      <div class="trait-card"><span class="trait-icon"><img src="" alt="magnetic nature"></span><h4>Outgoing &amp; Warm</h4><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Totam aspernatur, eum sunt voluptate vitae laboriosam dolore nemo dolorum reiciendis esse?</p></div>
+      <div class="trait-card"><span class="trait-icon"><img src="" alt="honesty"></span><h4>Radically Transparent</h4><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita assumenda facilis aut dolor quaerat. Reiciendis, beatae dolore culpa ullam ipsa quos aspernatur voluptate ut hic!</p></div>
+      <div class="trait-card"><span class="trait-icon"><img src="" alt="hard working lady"></span><h4>Relentlessly Hard-Working</h4><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima, nesciunt at ipsum laboriosam iusto iure ut reiciendis suscipit quis porro praesentium quia dolores.</p></div>
+      <div class="trait-card"><span class="trait-icon"><img src="" alt="have a good heart"></span><h4>Deeply Loving</h4><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam atque officiis sit cupiditate animi. Blanditiis sint sunt beatae, aliquam aperiam pariatur consequatur delectus adipisci doloremque.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+  <div class="contact-inner">
+    <div class="reveal"><span class="section-label">Let's Connect</span><h2 class="section-title">Get in <em>Touch</em></h2></div>
+    <p class="contact-tagline reveal">Whether it's agricultural consultation, educational collaboration, or simply wanting to connect — the door is open.</p>
+    <div class="contact-form reveal">
+      <div class="form-group"><label>Your Name</label><input type="text" placeholder="John Mwangi" required></div>
+      <div class="form-group"><label>Email Address</label><input type="email" placeholder="john@email.com" required></div>
+      <div class="form-group"><label>Subject</label><select><option>Agricultural Consultation</option><option>Educational Collaboration</option><option>Field Visit / Extension</option><option>General Inquiry</option><option>Other</option></select></div>
+      <div class="form-group"><label>Phone (Optional)</label><input type="tel" placeholder="+254 7XX XXX XXX"></div>
+      <div class="form-group full"><label>Your Message</label><textarea placeholder="Tell Mitchelle what's on your mind..."></textarea></div>
+      <div class="form-submit"><button class="btn-primary" onclick="handleSubmit(event)">Send Message →</button></div>
+    </div>
+    <div class="contact-info reveal">
+      <div class="contact-info-item"><span class="ci-label">Location</span><span class="ci-value">Nairobi, Kenya</span></div>
+      <div class="contact-info-item"><span class="ci-label">Institution</span><span class="ci-value">UoN - Kabete Campus</span></div>
+      <div class="contact-info-item"><span class="ci-label">Specialisation</span><span class="ci-value">AG.ED — Agriculture &amp; Education</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-logo">M<span>.</span>Kongo</div>
+  <div class="footer-links">
+    <a href="#about">About</a><a href="#agriculture">Agriculture</a>
+    <a href="#education">Education</a><a href="#life">Life</a><a href="#contact">Contact</a>
+  </div>
+  <p class="footer-copy">© 2026 Mitchelle Kongo. All rights reserved. — Rooted in Purpose.</p>
+</footer>
+
+<!-- MODAL -->
+<div class="modal-overlay" id="modalOverlay">
+  <div class="modal" id="modalContent">
+    <button class="modal-close" onclick="closeModal()">✕</button>
+  </div>
+</div>
+
+<script src="main.js">
+
+</script>
+</body>
+</html>
