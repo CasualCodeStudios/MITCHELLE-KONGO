@@ -1394,7 +1394,7 @@ section{
 
 /* ===== FOOTER ===== */
 footer{
-  background:var(--dark);
+  background:linear-gradient(to bottom, #000, transparent) ,url("footer-bg.jpg");
   color:var(--cream);
   padding:2.5rem 4rem 2rem;
   display:flex;
