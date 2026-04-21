@@ -1464,6 +1464,10 @@ footer{
   letter-spacing:.1em;
   text-transform:uppercase;
   font-family:'DM Sans',sans-serif;
+  background-color: #000;
+}
+#life .img-placeholder img{
+  filter: grayscale(0.6), brightness(0.5);
 }
 .img-ph-green{
   background:linear-gradient(135deg,#4A5E2A,#7A8C4E,#9DAE6B);
