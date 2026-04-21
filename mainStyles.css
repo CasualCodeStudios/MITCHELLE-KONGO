@@ -1402,6 +1402,7 @@ footer{
   align-items:center;
   flex-wrap:wrap;
   gap:1.2rem;
+  min-height: 40vh;
 }
 .footer-logo{
   font-family:'Playfair Display',serif;
