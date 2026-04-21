@@ -1402,7 +1402,7 @@ footer{
   align-items:center;
   flex-wrap:wrap;
   gap:1.2rem;
-  min-height: 40vh;
+  min-height: 70vh;
   background-attachment: fixed;
   background-position: center;
   background-size: cover;
