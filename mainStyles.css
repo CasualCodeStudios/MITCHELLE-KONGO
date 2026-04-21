@@ -1403,6 +1403,9 @@ footer{
   flex-wrap:wrap;
   gap:1.2rem;
   min-height: 40vh;
+  background-attachment: fixed;
+  background-position: center;
+  background-size: cover;
 }
 .footer-logo{
   font-family:'Playfair Display',serif;
