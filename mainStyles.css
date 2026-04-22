@@ -1394,6 +1394,7 @@ section{
 
 /* ===== FOOTER ===== */
 footer{
+  position: relative;
   background:linear-gradient(to bottom, #000, transparent) ,url("footer-bg.jpg") no-repeat;
   color:var(--cream);
   padding:2.5rem 4rem 2rem;
@@ -1417,9 +1418,16 @@ footer{
   color:var(--terra);
 }
 .footer-copy{
-  font-size:.74rem;
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  font-size:1.1rem;
   color:rgba(250,246,240,.4);
   letter-spacing:.06em;
+}
+.footer-copy a{
+  color: skyblue;
+  font-weight: bold;
 }
 .footer-links{
   display:flex;
