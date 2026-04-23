@@ -614,6 +614,14 @@ section{
   gap:1rem;
   margin-top:1.8rem;
 }
+.about-cards .more{
+  padding: 8px;
+  font-style: italic;
+  transition: 0.3s ease;
+}
+.about-cards:hover .more{
+  transform: translateX(10px);
+}
 .about-card{
   padding:1.2rem 1.4rem;
   border-left:3px solid var(--olive);
