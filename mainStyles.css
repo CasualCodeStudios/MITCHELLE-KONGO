@@ -618,9 +618,11 @@ section{
   padding: 8px;
   font-style: italic;
   transition: 0.3s ease;
+  border: none;
 }
 .about-cards:hover .more{
   transform: translateX(10px);
+  border-right: 2px solid rgb(118, 197, 0);
 }
 .about-card{
   padding:1.2rem 1.4rem;
