@@ -6,36 +6,35 @@
 <title>Mitchelle Kongo — AG-ED | Agricultural Officer & Educator</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Sans:wght@300;400;500&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="mainStyles.css">
-
 </head>
 <body>
 
 <div class="cursor" id="cursor"></div>
 <div class="cursor-follower" id="cursorFollower"></div>
 
-<!-- SPIN BADGE -->
-<div class="spin-badge" aria-hidden="true">
-  <svg viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
-    <circle cx="40" cy="40" r="38" stroke="var(--terra)" stroke-width="1.5" stroke-dasharray="4 4"/>
-    <path d="M40,5 A35,35 0 1,1 39.9,5" fill="none" id="circlePath"/>
-    <text font-size="7.5" fill="var(--terra)" font-family="DM Sans,sans-serif" letter-spacing="3.5" font-weight="500">
-      <textPath href="#circlePath">AGED · NAIROBI · KABETE ·</textPath>
-    </text>
-  </svg>
-  <div class="center-dot"></div>
+<!-- SCROLL TO TOP -->
+<button id="scrollTopBtn" aria-label="Scroll to top">↑</button>
+
+<!-- CCS AD POPUP -->
+<div id="ccsAdPopup" class="ccs-ad-corner" role="dialog" aria-label="Casual Code Studios">
+  <button class="ccs-ad-close" onclick="closeCcsAd()" aria-label="Close ad">✕</button>
+  <div class="ccs-ad-tag">// Built by</div>
+  <div class="ccs-ad-logo">Casual <em>Code</em> Studios</div>
+  <div class="ccs-ad-body">We craft beautiful, purposeful digital experiences — from personal brands to full-scale web platforms. Rooted in Kenya. Built for the world.</div>
+  <a href="https://casualcodestudios.vercel.app/" target="_blank" rel="noopener noreferrer" class="ccs-ad-btn">Visit Studio →</a>
 </div>
 
 <!-- NAV -->
 <nav id="mainNav">
-  <a href="index.html" class="nav-logo">M<span>.</span>K</a>
+  <a href="index.html" class="nav-logo"><img src="logo-removebg-preview (1).png" alt="Mitchelle Kongo Logo"></a>
   <ul class="nav-links">
     <li><a href="#about">About</a></li>
     <li><a href="#agriculture">Agriculture</a></li>
     <li><a href="#education">Education</a></li>
     <li><a href="#experience">Experience</a></li>
-    <li><a href="#life">Life</a></li>
+    <li><a href="#faq">FAQ</a></li>
     <li><a href="#contact">Contact</a></li>
   </ul>
   <button class="nav-toggle" id="navToggle" aria-label="Open menu">
@@ -47,7 +46,7 @@
   <a href="#agriculture" onclick="closeDrawer()">Agriculture</a>
   <a href="#education"   onclick="closeDrawer()">Education</a>
   <a href="#experience"  onclick="closeDrawer()">Experience</a>
-  <a href="#life"        onclick="closeDrawer()">Life</a>
+  <a href="#faq"         onclick="closeDrawer()">FAQ</a>
   <a href="#contact"     onclick="closeDrawer()">Contact</a>
 </nav>
 
@@ -58,16 +57,25 @@
     <h1 class="hero-name">Mitchelle<span class="last accent">Kongo</span></h1>
     <p class="hero-subtitle">Agricultural Officer. Educator. Field Practitioner. Born curious, raised purposeful and 'locally' — growing Kenya from the ground up.</p>
     <div class="hero-badges">
-      <span class="badge"><span><img src="student.png" alt="agricultural student icon"></span> AG-ED STUDENT</span>
-      <span class="badge terra"><span><img src="presentation.png" alt="Educator or teacher icon"></span> Educator</span>
-      <span class="badge gold"><span><img src="graduation.png" alt="schooling icon"></span> UoN Kabete</span>
+      <span class="badge">AG-ED STUDENT</span>
+      <span class="badge terra">Educator</span>
+      <span class="badge gold">UoN Kabete</span>
     </div>
     <div class="hero-cta">
       <a href="#about" class="btn-primary">Discover Her Story</a>
       <a href="#contact" class="btn-outline">Get in Touch</a>
     </div>
   </div>
+
   <div class="hero-right">
+    <div class="hero-hud-panel">
+      <div class="hud-card">
+        <div class="hud-card-label">// AG-ED Profile</div>
+        <div class="hud-card-title">What is AG-ED?</div>
+        <div class="hud-card-body">Agricultural Education & Extension — a programme merging crop science, soil management, and educational methodology to grow Kenya's next generation of farming experts.</div>
+        <a href="#agriculture" class="hud-btn">Explore the Journey →</a>
+      </div>
+    </div>
     <div class="hero-image-wrap">
       <div class="img-placeholder img-ph-green" style="height:100%;">
         <img src="hero.jpg" alt="Her hero section poster">
@@ -80,42 +88,91 @@
       <div class="stat-item"><div class="stat-num">UoN</div><div class="stat-label">Kabete Campus</div></div>
       <div class="stat-item"><div class="stat-num">Nairobi</div><div class="stat-label">Based In</div></div>
     </div>
+    <div class="hero-module-bar">
+      <span><span class="dot"></span> Status · Active Field Officer</span>
+      <span>📍 Nairobi, Kenya</span>
+      <span>// UoN Kabete · AG-ED Programme</span>
+      <span>Special Collaboration · Rooted in Purpose</span>
+    </div>
   </div>
+
+  <a href="#about" class="scroll-cta" aria-label="Scroll down">
+    <div class="scroll-cta-arrow">
+      <svg viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg>
+    </div>
+    scroll
+  </a>
 </section>
+
+<div class="cosmos-divider"></div>
 
 <!-- TICKER -->
 <div class="ticker-wrap" aria-hidden="true">
   <div class="ticker">AGRICULTURAL OFFICER <span>✦</span> EDUCATOR <span>✦</span> FIELD SPECIALIST <span>✦</span> UON KABETE <span>✦</span> NAIROBI <span>✦</span> AGED GRADUATE <span>✦</span> KISII ROOTS <span>✦</span> GROUNDED IN PURPOSE <span>✦</span> AGRICULTURAL OFFICER <span>✦</span> EDUCATOR <span>✦</span> FIELD SPECIALIST <span>✦</span> UON KABETE <span>✦</span> NAIROBI <span>✦</span> AGED GRADUATE <span>✦</span> KISII ROOTS <span>✦</span> GROUNDED IN PURPOSE <span>✦</span></div>
 </div>
 
+<div class="cosmos-divider"></div>
+
 <!-- ABOUT -->
 <section id="about">
   <div class="about-grid">
     <div class="about-img-stack reveal">
-      <div class="about-img-main"><div class="img-placeholder img-ph-blush"><img src="portrait.jpg" alt="portrait pic"></div></div>
-      <div class="about-img-accent"><div class="img-placeholder img-ph-sage"><img src="field.jpg" alt="field day"></div></div>
+      <div class="about-img-main">
+        <div class="img-placeholder img-ph-blush">
+          <img style="width:100%;height:100%;object-fit:cover;" src="portrait.jpg" alt="portrait pic">
+        </div>
+      </div>
+      <div class="about-img-accent">
+        <div class="img-placeholder img-ph-sage">
+          <img style="width:100%;height:100%;object-fit:cover;" src="field.jpg" alt="field day">
+        </div>
+      </div>
       <div class="about-decor-box"></div>
+      <div class="about-cosmos-badge">
+        <div class="about-cosmos-badge-tag">// Field Status</div>
+        <div class="about-cosmos-badge-value">Agric Officer</div>
+      </div>
     </div>
     <div class="about-text reveal">
-      <span class="section-label">Who She Is</span>
-      <h2 class="section-title">About <em>Mitchelle</em></h2>
-      <p>Mitchelle Kongo is a passionate Agricultural Officer and Educator — a proud AG-ED student at the University of Nairobi, Kabete Campus. She walks fields with purpose, brings life to classrooms, and believes feeding a nation starts with educating the next generation of farmers.</p>
-      <p>Raised by a Kisii tigress of a mother and the best brothers one could ask for, Mitchelle carries both fire and grace. Outgoing, transparent, and hardworking — with a legendary naptime no one dares interrupt.</p>
-      <div class="about-pills">
-        <span class="pill"><span><img src="agronomy.png" alt="agronomy"></span> Agronomy</span>
-        <span class="pill"><span><img src="education.png" alt="education icon"></span> Extension Education</span>
-        <span class="pill"><span><img src="heritage.png" alt="home or heritage"></span> Kisii Heritage</span>
-        <span class="pill"><span><img src="church.png" alt="faith or church day icon"></span> Sarturday Faithful</span>
-        <span class="pill"><span><img src="hiking.png" alt="hiking icon"></span> Long Walk Lover</span>
+      <div class="abt-txt">
+        <span class="section-label">Who She Is</span>
+        <h2 class="section-title">About <em>Mitchelle</em></h2>
+        <p>Mitchelle Kongo is a passionate Agricultural Officer and Educator — a proud AG-ED student at the University of Nairobi, Kabete Campus. She walks fields with purpose, brings life to classrooms, and believes feeding a nation starts with educating the next generation of farmers.</p>
+        <p>Raised by a Kisii tigress of a mother and the best brothers one could ask for, Mitchelle carries both fire and grace. Outgoing, transparent, and hardworking — with a legendary naptime no one dares interrupt.</p>
+        <div class="about-pills">
+          <span class="pill">Agronomy</span>
+          <span class="pill">Extension Education</span>
+          <span class="pill">Kisii Heritage</span>
+          <span class="pill">Saturday Faithful</span>
+          <span class="pill">Long Walk Lover</span>
+        </div>
       </div>
       <div class="about-cards">
-        <div class="about-card" onclick="openModal('agri')"><h4><span><img src="agric.png" alt="agricultural icon"></span> Agricultural Journey</h4><p>From seedling to specialist — her path through Kenya's agriculture sector.</p> <button class="more">+ more</button></div>
-        <div class="about-card terra" onclick="openModal('edu')"><h4><span><img src="academy.png" alt="education icon or studying icon"></span> Education Story</h4><p>Teaching, mentoring, and shaping future agricultural minds.</p><button class="more">+ more</button></div>
+        <div class="about-card" onclick="openModal('agri')">
+          <h4><span><img src="agric.png" alt="agricultural icon"></span> Agric Journey</h4>
+          <p>From seedling to specialist — her path through Kenya's agriculture sector.</p>
+          <button class="more">+ more</button>
+        </div>
+        <div class="about-card terra" onclick="openModal('edu')">
+          <h4><span><img src="academy.png" alt="education icon"></span> Edu Journey</h4>
+          <p>Teaching, mentoring, and shaping future agricultural minds.</p>
+          <button class="more">+ more</button>
+        </div>
       </div>
       <a href="#agriculture" class="about-more">Explore Her Full Story</a>
     </div>
   </div>
 </section>
+
+<div class="cosmos-divider"></div>
+
+<!-- CCS TICKER 2 -->
+<div class="ccs-ticker-strip" aria-label="Casual Code Studios advertisement">
+  <div class="ccs-ticker-inner">
+    <a href="https://casualcodestudios.vercel.app/" target="_blank" rel="noopener noreferrer">🎨 <span class="ccs-name">Casual Code Studios</span> <span class="ccs-dot">✦</span> Your Vision. Our Code. <span class="ccs-dot">✦</span> Premium Web Experiences for Every Budget <span class="ccs-dot">✦</span> Start Your Project at casual-code-studios.vercel.app <span class="ccs-dot">✦</span></a>
+    <a href="https://casualcodestudios.vercel.app/" target="_blank" rel="noopener noreferrer">🎨 <span class="ccs-name">Casual Code Studios</span> <span class="ccs-dot">✦</span> Your Vision. Our Code. <span class="ccs-dot">✦</span> Premium Web Experiences for Every Budget <span class="ccs-dot">✦</span> Start Your Project at casual-code-studios.vercel.app <span class="ccs-dot">✦</span></a>
+  </div>
+</div>
 
 <!-- AGRICULTURE -->
 <section id="agriculture">
@@ -125,35 +182,66 @@
       <div><span class="section-label">Fields &amp; Farms</span><h2 class="section-title">The <em>Agriculture</em><br>Journey</h2></div>
       <p class="agri-intro">"The soil does not lie. Neither does she. Every day she shows up — for the land, for the farmer, for the future."</p>
     </div>
-    <div class="agri-timeline">
-      <div class="timeline-item"><div class="timeline-year">The Beginning</div><div class="timeline-title">Growing Up Around Green</div><p class="timeline-desc">Raised in the fertile highlands, Mitchelle developed an early appreciation for the land. Watching her community depend on farming sparked a calling — not just to farm, but to transform how others farm.</p></div>
-      <div class="timeline-item"><div class="timeline-year">University Years</div><div class="timeline-title">AG-ED Programme — University of Nairobi, Kabete Campus</div><p class="timeline-desc">Her pursuing the Agricultural Education and Extension (AG-ED) programme — a rigorous combination of agronomy, soil science, crop production, and educational methodology. She excells in field practicals, earning recognition for her hands-on approach and genuine curiosity.</p></div>
-      <div class="timeline-item"><div class="timeline-year">Field Attachments</div><div class="timeline-title">Boots in the Soil — Attachment Experience</div><p class="timeline-desc">During her attachments, Mitchelle worked directly with smallholder farmers across multiple counties, conducting soil tests, advising on crop rotation, sustainable irrigation techniques, and integrated pest management.</p></div>
-      <div class="timeline-item"><div class="timeline-year">Today</div><div class="timeline-title">Agricultural Officer — Nairobi Region</div><p class="timeline-desc">Currently working part-time as an agricultural officer in Nairobi, Mitchelle bridges the urban-rural divide — helping peri-urban and city-edge farmers adopt modern sustainable practices while continuing her studies.</p></div>
+    <div class="agri-cosmos-panel reveal">
+      <div class="agri-cosmos-panel-icon">🌾</div>
+      <div>
+        <div class="agri-cosmos-panel-label">// Programme Overview</div>
+        <div class="agri-cosmos-panel-text">AG-ED — Agricultural Education & Extension · University of Nairobi, Kabete Campus · Active Field Officer · Nairobi Region</div>
+      </div>
+    </div>
+    <div class="agri-timeline" style="margin-top:3rem;">
+      <div class="timeline-item"><div class="timeline-year">// The Beginning</div><div class="timeline-title">Growing Up Around Green</div><p class="timeline-desc">Raised in the fertile highlands, Mitchelle developed an early appreciation for the land. Watching her community depend on farming sparked a calling — not just to farm, but to transform how others farm.</p></div>
+      <div class="timeline-item"><div class="timeline-year">// University Years</div><div class="timeline-title">AG-ED Programme — University of Nairobi, Kabete Campus</div><p class="timeline-desc">Pursuing the Agricultural Education and Extension (AG-ED) programme — a rigorous combination of agronomy, soil science, crop production, and educational methodology. She excels in field practicals, earning recognition for her hands-on approach and genuine curiosity.</p></div>
+      <div class="timeline-item"><div class="timeline-year">// Field Attachments</div><div class="timeline-title">Boots in the Soil — Attachment Experience</div><p class="timeline-desc">During her attachments, Mitchelle worked directly with smallholder farmers across multiple counties, conducting soil tests, advising on crop rotation, sustainable irrigation techniques, and integrated pest management.</p></div>
+      <div class="timeline-item"><div class="timeline-year">// Today</div><div class="timeline-title">Agricultural Officer — Nairobi Region</div><p class="timeline-desc">Currently working part-time as an agricultural officer in Nairobi, Mitchelle bridges the urban-rural divide — helping peri-urban and city-edge farmers adopt modern sustainable practices while continuing her studies.</p></div>
     </div>
     <div class="agri-gallery">
       <div class="agri-gal-item"><div class="img-placeholder img-ph-green"><img src="soil.testing.jpg" alt="soil testing"></div><div class="gal-caption"><p>Soil Analysis Field Work</p></div></div>
       <div class="agri-gal-item"><div class="img-placeholder img-ph-sage"><img src="crop-trials.jpg" alt="crop trials"></div><div class="gal-caption"><p>Crop Variety Trials</p></div></div>
       <div class="agri-gal-item"><div class="img-placeholder img-ph-terra"><img src="farmer-training.jpg" alt="farmer training"></div><div class="gal-caption"><p>Smallholder Farmer Training</p></div></div>
-      <div class="agri-gal-item"><div class="img-placeholder img-ph-gold"><img src="field-visit.jpg" alt=""></div><div class="gal-caption"><p>Extension Field Visit</p></div></div>
+      <div class="agri-gal-item"><div class="img-placeholder img-ph-gold"><img src="field-visit.jpg" alt="field visit"></div><div class="gal-caption"><p>Extension Field Visit</p></div></div>
     </div>
   </div>
 </section>
 
+<div class="cosmos-divider"></div>
+
+<!-- CCS TICKER 3 -->
+<div class="ccs-ticker-strip" aria-label="Casual Code Studios advertisement">
+  <div class="ccs-ticker-inner">
+    <a href="https://casualcodestudios.vercel.app/" target="_blank" rel="noopener noreferrer">🎨 <span class="ccs-name">Casual Code Studios</span> <span class="ccs-dot">✦</span> Your Vision. Our Code. <span class="ccs-dot">✦</span> Premium Web Experiences for Every Budget <span class="ccs-dot">✦</span> Start Your Project at casual-code-studios.vercel.app <span class="ccs-dot">✦</span></a>
+    <a href="https://casualcodestudios.vercel.app/" target="_blank" rel="noopener noreferrer">🎨 <span class="ccs-name">Casual Code Studios</span> <span class="ccs-dot">✦</span> Your Vision. Our Code. <span class="ccs-dot">✦</span> Premium Web Experiences for Every Budget <span class="ccs-dot">✦</span> Start Your Project at casual-code-studios.vercel.app <span class="ccs-dot">✦</span></a>
+  </div>
+</div>
+
 <!-- EDUCATION -->
 <section id="education">
+  <!-- Bubble decoration -->
+  <div class="edu-bubble-wrap" aria-hidden="true" id="eduBubbleWrap"></div>
   <div class="edu-inner">
     <div class="reveal"><span class="section-label">Teaching &amp; Extension</span><h2 class="section-title">The <em>Education</em> Path</h2></div>
     <div class="edu-grid">
       <div class="edu-card-stack">
-        <div class="edu-card reveal"><div class="edu-card-tag">Academic Foundation</div><h3>AG-ED — Agricultural Education &amp; Extension</h3><p>A demanding programme combining crop science, soil management, animal husbandry, and education theory. Mitchelle brought every lab and lecture into real-world context through community projects and attachment programmes.</p></div>
-        <div class="edu-card reveal"><div class="edu-card-tag">Extension Work</div><h3>Classroom to Fieldroom</h3><p>As an agricultural extension educator, she develops practical training sessions for farmers — simplifying complex agronomy into easy-to-implement farm practices. She's trained groups on water harvesting, organic composting, and climate-smart agriculture.</p></div>
-        <div class="edu-card reveal"><div class="edu-card-tag">Mentorship</div><h3>Inspiring the Next Harvest</h3><p>Mitchelle volunteers mentoring secondary school agriculture students, sparking curiosity in young people who might one day transform Kenya's food security.</p></div>
+        <div class="edu-card reveal">
+          <div class="edu-card-tag">// Academic Foundation</div>
+          <h3>AG-ED — Agricultural Education &amp; Extension</h3>
+          <p>A demanding programme combining crop science, soil management, animal husbandry, and education theory. Mitchelle brought every lab and lecture into real-world context through community projects and attachment programmes.</p>
+        </div>
+        <div class="edu-card reveal">
+          <div class="edu-card-tag">// Extension Work</div>
+          <h3>Classroom to Fieldroom</h3>
+          <p>As an agricultural extension educator, she develops practical training sessions for farmers — simplifying complex agronomy into easy-to-implement farm practices. She's trained groups on water harvesting, organic composting, and climate-smart agriculture.</p>
+        </div>
+        <div class="edu-card reveal">
+          <div class="edu-card-tag">// Mentorship</div>
+          <h3>Inspiring the Next Harvest</h3>
+          <p>Mitchelle volunteers mentoring secondary school agriculture students, sparking curiosity in young people who might one day transform Kenya's food security.</p>
+        </div>
       </div>
       <div class="edu-right reveal">
         <blockquote class="big-quote">"You don't educate a farmer once. You walk with them through every season — that's extension work."</blockquote>
         <div class="edu-skills">
-          <h4>Core Competencies</h4>
+          <h4>// Core Competencies</h4>
           <div class="skill-bar-wrap"><div class="skill-bar-label"><span>Agronomy &amp; Crop Science</span><span>84%</span></div><div class="skill-bar-track"><div class="skill-bar-fill" data-width="84"></div></div></div>
           <div class="skill-bar-wrap"><div class="skill-bar-label"><span>Agricultural Extension Education</span><span>75%</span></div><div class="skill-bar-track"><div class="skill-bar-fill" data-width="75"></div></div></div>
           <div class="skill-bar-wrap"><div class="skill-bar-label"><span>Soil Science &amp; Land Management</span><span>80%</span></div><div class="skill-bar-track"><div class="skill-bar-fill" data-width="80"></div></div></div>
@@ -170,49 +258,116 @@
   </div>
 </section>
 
+<div class="cosmos-divider"></div>
+
+<!-- CCS TICKER 4 -->
+<div class="ccs-ticker-strip" aria-label="Casual Code Studios advertisement">
+  <div class="ccs-ticker-inner">
+    <a href="https://casualcodestudios.vercel.app/" target="_blank" rel="noopener noreferrer">🎨 <span class="ccs-name">Casual Code Studios</span> <span class="ccs-dot">✦</span> Your Vision. Our Code. <span class="ccs-dot">✦</span> Premium Web Experiences for Every Budget <span class="ccs-dot">✦</span> Start Your Project at casual-code-studios.vercel.app <span class="ccs-dot">✦</span></a>
+    <a href="https://casualcodestudios.vercel.app/" target="_blank" rel="noopener noreferrer">🎨 <span class="ccs-name">Casual Code Studios</span> <span class="ccs-dot">✦</span> Your Vision. Our Code. <span class="ccs-dot">✦</span> Premium Web Experiences for Every Budget <span class="ccs-dot">✦</span> Start Your Project at casual-code-studios.vercel.app <span class="ccs-dot">✦</span></a>
+  </div>
+</div>
+
 <!-- EXPERIENCE -->
 <section id="experience">
   <div class="exp-inner">
     <div class="reveal"><span class="section-label">Attachments &amp; Practice</span><h2 class="section-title">Field <em>Experience</em></h2></div>
     <div class="exp-grid">
-      <div class="exp-card"><div class="exp-card-num">01</div><div class="exp-card-tag">Industrial Attachment</div><h3>County Government — Agricultural Dept.</h3><p>Assisted with crop inspection, pest scouting, and soil nutrition programs targeting small-scale farmers. Attended and facilitated barazas on fertilizer subsidy access and proper application.</p></div>
-      <div class="exp-card"><div class="exp-card-num">02</div><div class="exp-card-tag">Research Attachment</div><h3>UoN Kabete Research Farm</h3><p>Participated in crop research programmes including variety evaluation trials, greenhouse management, and data collection for ongoing food systems research projects.</p></div>
-      <div class="exp-card"><div class="exp-card-num">03</div><div class="exp-card-tag">Community Extension</div><h3>Peri-Urban Nairobi Farmers</h3><p>Designed and delivered practical workshops covering container gardening, drip irrigation, organic fertilizers, and post-harvest handling for market-ready produce.</p></div>
-      <div class="exp-card"><div class="exp-card-num">04</div><div class="exp-card-tag">School Visits</div><h3>Secondary School Ag. Programme</h3><p>Conducted educational outreach at secondary schools through farm demonstrations and career talks to inspire the next generation of agricultural professionals.</p></div>
-      <div class="exp-card"><div class="exp-card-num">05</div><div class="exp-card-tag">Part-Time Practice</div><h3>Agri-Officer — Nairobi Metro</h3><p>Balancing studies with part-time work as an agricultural officer — advising urban farmers, liaising with input suppliers, and supporting county-level food security monitoring.</p></div>
-      <div class="exp-card"><div class="exp-card-num">06</div><div class="exp-card-tag">Life Lessons</div><h3>The School of Daily Living</h3><p>Real-world education comes from long walks in the market, mama's wisdom, Saturday church community work, and the quiet discipline of showing up every single day.</p></div>
+      <div class="exp-card"><div class="exp-card-num">01</div><div class="exp-card-tag">// Industrial Attachment</div><h3>County Government — Agricultural Dept.</h3><p>Assisted with crop inspection, pest scouting, and soil nutrition programs targeting small-scale farmers. Attended and facilitated barazas on fertilizer subsidy access and proper application.</p></div>
+      <div class="exp-card"><div class="exp-card-num">02</div><div class="exp-card-tag">// Research Attachment</div><h3>UoN Kabete Research Farm</h3><p>Participated in crop research programmes including variety evaluation trials, greenhouse management, and data collection for ongoing food systems research projects.</p></div>
+      <div class="exp-card"><div class="exp-card-num">03</div><div class="exp-card-tag">// Community Extension</div><h3>Peri-Urban Nairobi Farmers</h3><p>Designed and delivered practical workshops covering container gardening, drip irrigation, organic fertilizers, and post-harvest handling for market-ready produce.</p></div>
+      <div class="exp-card"><div class="exp-card-num">04</div><div class="exp-card-tag">// School Visits</div><h3>Secondary School Ag. Programme</h3><p>Conducted educational outreach at secondary schools through farm demonstrations and career talks to inspire the next generation of agricultural professionals.</p></div>
+      <div class="exp-card"><div class="exp-card-num">05</div><div class="exp-card-tag">// Part-Time Practice</div><h3>Agri-Officer — Nairobi Metro</h3><p>Balancing studies with part-time work as an agricultural officer — advising urban farmers, liaising with input suppliers, and supporting county-level food security monitoring.</p></div>
+      <div class="exp-card"><div class="exp-card-num">06</div><div class="exp-card-tag">// Life Lessons</div><h3>The School of Daily Living</h3><p>Real-world education comes from long walks in the market, mama's wisdom, Saturday church community work, and the quiet discipline of showing up every single day.</p></div>
     </div>
   </div>
 </section>
 
-<!-- LIFE -->
-<section id="life">
-  <div class="life-inner">
-    <div class="life-header reveal"><span class="section-label">The Unofficial Side</span><h2 class="section-title">Daily <em>Life</em></h2></div>
-    <div class="life-big-grid reveal">
-      <div class="life-item"><div class="img-placeholder img-ph-terra"><img src="friends.jpg" alt="with friends"></div><div class="life-overlay"><p>"Hanging with her people — the ones who know the real Mitchelle."</p></div></div>
-      <div class="life-item"><div class="img-placeholder img-ph-blush">Church</div><div class="life-overlay"><p>"Saturday church — non-negotiable, rain or shine."</p></div></div>
-      <div class="life-item"><div class="img-placeholder img-ph-green"><img src="beauty.jpg" alt="beauty"></div><div class="life-overlay"><p>"Beauty that softens the edges — her mirror is the sunrise."</p></div></div>
-      <div class="life-item"><div class="img-placeholder img-ph-gold">Junk</div><div class="life-overlay"><p>"Junk food is a love language."</p></div></div>
-      <div class="life-item"><div class="img-placeholder img-ph-sage">Nap</div><div class="life-overlay"><p>"Naptime is sacred. Disturb at your own risk."</p></div></div>
-      <div class="life-item"><div class="img-placeholder img-ph-dark">Family</div><div class="life-overlay"><p>"Family first — always, every time."</p></div></div>
+<div class="cosmos-divider"></div>
+
+<!-- CCS TICKER 5 -->
+<div class="ccs-ticker-strip" aria-label="Casual Code Studios advertisement">
+  <div class="ccs-ticker-inner">
+    <a href="https://casualcodestudios.vercel.app/" target="_blank" rel="noopener noreferrer">🎨 <span class="ccs-name">Casual Code Studios</span> <span class="ccs-dot">✦</span> Your Vision. Our Code. <span class="ccs-dot">✦</span> Premium Web Experiences for Every Budget <span class="ccs-dot">✦</span> Start Your Project at casual-code-studios.vercel.app <span class="ccs-dot">✦</span></a>
+    <a href="https://casualcodestudios.vercel.app/" target="_blank" rel="noopener noreferrer">🎨 <span class="ccs-name">Casual Code Studios</span> <span class="ccs-dot">✦</span> Your Vision. Our Code. <span class="ccs-dot">✦</span> Premium Web Experiences for Every Budget <span class="ccs-dot">✦</span> Start Your Project at casual-code-studios.vercel.app <span class="ccs-dot">✦</span></a>
+  </div>
+</div>
+
+<!-- FAQ -->
+<section id="faq">
+  <div class="faq-inner">
+    <div class="faq-header reveal">
+      <span class="section-label">Common Questions</span>
+      <h2 class="section-title">Frequently <em>Asked</em></h2>
     </div>
-    <div class="life-quotes">
-      <div class="lq-item"><span class="lq-emoji"><img src="" alt="long walks"></span><p>"Long walks are my reset button — nature speaks the same language as the farm."</p></div>
-      <div class="lq-item"><span class="lq-emoji"><img src="" alt="church day"></span><p>"Saturday and church — that's not a schedule, that's a lifestyle. Don't call before 1 PM."</p></div>
-      <div class="lq-item"><span class="lq-emoji"><img src="" alt="junky food"></span><p>"I teach sustainable agriculture by day. I eat fries by night. Balance, right?"</p></div>
-      <div class="lq-item"><span class="lq-emoji"><img src="" alt="sleepyhead"></span><p>"My second life happens between 2 and 4 PM. Nap. Do not disturb. No exceptions."</p></div>
-      <div class="lq-item"><span class="lq-emoji"><img src="" alt="long drives naah!!"></span><p>"Love long walks. Long drives? Absolutely not. My carsickness is my kryptonite."</p></div>
-      <div class="lq-item"><span class="lq-emoji"><img src="" alt="family"></span><p>"My mother is a Kisii tigress. My brothers are my biggest fans. Family is where I grew."</p></div>
-    </div>
-    <div class="life-traits">
-      <div class="trait-card"><span class="trait-icon"><img src="" alt="magnetic nature"></span><h4>Outgoing &amp; Warm</h4><p>She walks into a room and makes it lighter. Mitchelle's energy is magnetic — friends are drawn to her honesty and laughter.</p></div>
-      <div class="trait-card"><span class="trait-icon"><img src="" alt="honesty"></span><h4>Radically Transparent</h4><p>What you see is what you get. No masks, no pretence. Genuinely herself in every space she exists.</p></div>
-      <div class="trait-card"><span class="trait-icon"><img src="" alt="hard working lady"></span><h4>Relentlessly Hard-Working</h4><p>Whether in the field or the classroom, she gives everything. (Except during naptime — non-negotiable.)</p></div>
-      <div class="trait-card"><span class="trait-icon"><img src="" alt="have a good heart"></span><h4>Deeply Loving</h4><p>As a daughter, as a sister, as a friend — Mitchelle loves loudly and loyally. Her Kisii roots run deep and warm.</p></div>
+    <div class="faq-list">
+      <div class="faq-item reveal">
+        <button class="faq-question" onclick="toggleFaq(this)" aria-expanded="false">
+          <span class="faq-q-text">What exactly is the AG-ED programme at UoN Kabete?</span>
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-answer">
+          <p>AG-ED stands for Agricultural Education and Extension — a unique programme offered at the University of Nairobi's Kabete Campus. It merges rigorous agricultural science (agronomy, soil science, crop production, animal husbandry) with educational methodology and extension communication. Graduates are trained not just to farm, but to teach and guide farming communities. Mitchelle is one of these dual-skilled professionals — equal parts agronomist and educator.</p>
+        </div>
+      </div>
+      <div class="faq-item reveal">
+        <button class="faq-question" onclick="toggleFaq(this)" aria-expanded="false">
+          <span class="faq-q-text">What services does Mitchelle offer as an Agricultural Officer?</span>
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-answer">
+          <p>Mitchelle provides a range of agricultural consultancy and extension services — including soil testing and fertility advisory, integrated pest and disease management, crop rotation planning, sustainable irrigation guidance, post-harvest handling, and linkage with government input subsidy programmes. She specialises in peri-urban and urban farming contexts, helping city-edge smallholders adopt climate-smart practices that are both practical and profitable.</p>
+        </div>
+      </div>
+      <div class="faq-item reveal">
+        <button class="faq-question" onclick="toggleFaq(this)" aria-expanded="false">
+          <span class="faq-q-text">Can Mitchelle work with schools or community groups?</span>
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-answer">
+          <p>Absolutely. Mitchelle has a strong track record in educational outreach — conducting farm demonstrations, career talks, and training sessions at secondary schools across the region. She also facilitates community workshops on water harvesting, organic composting, and container gardening. Whether you're a school, an NGO, a farmer group, or a county government extension team, Mitchelle can design and deliver sessions that are hands-on, accessible, and genuinely impactful.</p>
+        </div>
+      </div>
+      <div class="faq-item reveal">
+        <button class="faq-question" onclick="toggleFaq(this)" aria-expanded="false">
+          <span class="faq-q-text">How can I collaborate with or contact Mitchelle?</span>
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-answer">
+          <p>The best way to reach out is through the contact form at the bottom of this page. Whether you're interested in agricultural consultation, educational collaboration, an extension field visit, or simply want to connect professionally, Mitchelle welcomes genuine conversations. She's currently based in Nairobi and works part-time as an agricultural officer while completing her AG-ED programme at UoN Kabete — so response times are prompt, and engagement is always personal.</p>
+        </div>
+      </div>
+      <div class="faq-item reveal">
+        <button class="faq-question" onclick="toggleFaq(this)" aria-expanded="false">
+          <span class="faq-q-text">What areas of Kenya does she cover for field work?</span>
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-answer">
+          <p>Mitchelle is primarily based in Nairobi and focuses on Nairobi's peri-urban and metropolitan farming communities. Her academic attachments and field experience have taken her across multiple agro-ecological zones in Kenya — from central highlands to parts of Rift Valley and Nyanza. For organised extension programmes, school visits, or consultancy assignments, she is open to working across counties with prior arrangement.</p>
+        </div>
+      </div>
+      <div class="faq-item reveal">
+        <button class="faq-question" onclick="toggleFaq(this)" aria-expanded="false">
+          <span class="faq-q-text">What does Mitchelle's approach to climate-smart agriculture look like in practice?</span>
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-answer">
+          <p>Climate-smart agriculture, for Mitchelle, is never theoretical — it's a conversation at the farm gate. Her approach starts by understanding the farmer's land, water access, and seasonal patterns before recommending anything. Practically, this includes promoting drought-tolerant crop varieties, setting up low-cost rainwater harvesting systems, encouraging organic mulching to retain soil moisture, and rotating crops to restore soil health naturally. She strongly believes that climate adaptation must be affordable and immediately actionable — solutions designed for the farmer who is already doing it tough, not just the one with resources to spare.</p>
+        </div>
+      </div>
     </div>
   </div>
 </section>
+
+<div class="cosmos-divider"></div>
+
+<!-- CCS TICKER 6 -->
+<div class="ccs-ticker-strip" aria-label="Casual Code Studios advertisement">
+  <div class="ccs-ticker-inner">
+    <a href="https://casualcodestudios.vercel.app/" target="_blank" rel="noopener noreferrer">🎨 <span class="ccs-name">Casual Code Studios</span> <span class="ccs-dot">✦</span> Your Vision. Our Code. <span class="ccs-dot">✦</span> Premium Web Experiences for Every Budget <span class="ccs-dot">✦</span> Start Your Project at casual-code-studios.vercel.app <span class="ccs-dot">✦</span></a>
+    <a href="https://casualcodestudios.vercel.app/" target="_blank" rel="noopener noreferrer">🎨 <span class="ccs-name">Casual Code Studios</span> <span class="ccs-dot">✦</span> Your Vision. Our Code. <span class="ccs-dot">✦</span> Premium Web Experiences for Every Budget <span class="ccs-dot">✦</span> Start Your Project at casual-code-studios.vercel.app <span class="ccs-dot">✦</span></a>
+  </div>
+</div>
 
 <!-- CONTACT -->
 <section id="contact">
@@ -220,8 +375,8 @@
     <div class="reveal"><span class="section-label">Let's Connect</span><h2 class="section-title">Get in <em>Touch</em></h2></div>
     <p class="contact-tagline reveal">Whether it's agricultural consultation, educational collaboration, or simply wanting to connect — the door is open.</p>
     <div class="contact-form reveal">
-      <div class="form-group"><label>Your Name</label><input type="text" placeholder="John Mwangi"></div>
-      <div class="form-group"><label>Email Address</label><input type="email" placeholder="john@email.com"></div>
+      <div class="form-group"><label>Your Name</label><input type="text" placeholder="Mitchelle Kongo"></div>
+      <div class="form-group"><label>Email Address</label><input type="email" placeholder="your-email@gmail.com"></div>
       <div class="form-group"><label>Subject</label><select><option>Agricultural Consultation</option><option>Educational Collaboration</option><option>Field Visit / Extension</option><option>General Inquiry</option><option>Other</option></select></div>
       <div class="form-group"><label>Phone (Optional)</label><input type="tel" placeholder="+254 7XX XXX XXX"></div>
       <div class="form-group full"><label>Your Message</label><textarea placeholder="Tell Mitchelle what's on your mind..."></textarea></div>
@@ -237,12 +392,52 @@
 
 <!-- FOOTER -->
 <footer>
-  <div class="footer-logo">M<span>.</span>Kongo</div>
-  <div class="footer-links">
-    <a href="#about">About</a><a href="#agriculture">Agriculture</a>
-    <a href="#education">Education</a><a href="#life">Life</a><a href="#contact">Contact</a>
+  <!-- Bubbles -->
+  <div class="footer-bubbles" id="footerBubbles" aria-hidden="true"></div>
+
+  <div class="footer-inner">
+    <!-- Brand col -->
+    <div class="footer-brand">
+      <img src="logo-removebg-preview (1).png" alt="Mitchelle Kongo Logo" class="footer-brand-img">
+      
+      <p class="footer-brand-tagline">Agricultural Officer & Educator rooted in purpose — growing Kenya from the ground up, one farmer at a time.</p>
+      <div class="footer-links">
+        <a href="#about">About</a>
+        <a href="#agriculture">Agriculture</a>
+        <a href="#education">Education</a>
+        <a href="#experience">Experience</a>
+        <a href="#faq">FAQ</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </div>
+
+    <!-- Nav col -->
+    <div class="footer-nav-col">
+      <h5>// Explore</h5>
+      <ul>
+        <li><a href="#agriculture">The Agriculture Journey</a></li>
+        <li><a href="#education">The Education Path</a></li>
+        <li><a href="#experience">Field Experience</a></li>
+        <li><a href="#faq">Frequently Asked</a></li>
+        <li><a href="#contact">Get in Touch</a></li>
+        <li><a href="https://casualcodestudios.vercel.app/" target="_blank" rel="noopener noreferrer">Built by Casual Code Studios</a></li>
+      </ul>
+    </div>
+
+    <!-- Newsletter col -->
+    <div class="footer-newsletter">
+      <h5>// Stay Connected</h5>
+      <p>Get occasional updates on agricultural insights, extension events, and Mitchelle's field stories. No spam — just purpose.</p>
+      <div class="newsletter-form">
+        <input type="email" placeholder="your@email.com" aria-label="Email address for newsletter">
+        <button onclick="handleNewsletter(this)">Subscribe →</button>
+      </div>
+    </div>
   </div>
-  <p class="footer-copy">© 2026 Mitchelle Kongo. All rights reserved. — Rooted in Purpose.  Developed by <a href="https://casual-code-studios.vercel.app/" target="_blank" rel="noopener noreferrer">Casual Code Studios</a></p>
+
+  <div class="footer-bottom">
+    <p class="footer-copy">© 2026 Mitchelle Kongo. All rights reserved. — Rooted in Purpose. Developed by <a href="https://casual-code-studios.vercel.app/" target="_blank" rel="noopener noreferrer">Casual Code Studios</a></p>
+  </div>
 </footer>
 
 <!-- MODAL -->
@@ -252,8 +447,271 @@
   </div>
 </div>
 
-<script src="main.js">
+<script>
+/* =====================================================
+   MAIN SCRIPT — single source of truth, no main.js
+   ===================================================== */
 
+/* ── CURSOR (fine pointer only) ── */
+(function () {
+  const cur = document.getElementById('cursor');
+  const fol = document.getElementById('cursorFollower');
+  if (!window.matchMedia('(pointer:fine)').matches || !cur) return;
+  document.addEventListener('mousemove', e => {
+    cur.style.left = e.clientX + 'px';
+    cur.style.top  = e.clientY + 'px';
+    setTimeout(() => { fol.style.left = e.clientX + 'px'; fol.style.top = e.clientY + 'px'; }, 80);
+  });
+  document.querySelectorAll('a,button,.about-card,.life-item,.agri-gal-item').forEach(el => {
+    el.addEventListener('mouseenter', () => { cur.style.transform = 'translate(-50%,-50%) scale(2.5)'; cur.style.background = 'var(--olive)'; });
+    el.addEventListener('mouseleave', () => { cur.style.transform = 'translate(-50%,-50%) scale(1)';   cur.style.background = 'var(--terra)'; });
+  });
+})();
+
+/* ── SCROLL TO TOP ── */
+(function () {
+  const btn = document.getElementById('scrollTopBtn');
+  if (!btn) return;
+  window.addEventListener('scroll', () => { btn.style.opacity = window.scrollY > 300 ? '1' : '0'; }, { passive: true });
+  btn.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
+})();
+
+/* ── NAV: scrolled class + active link ── */
+(function () {
+  const nav = document.getElementById('mainNav');
+  if (!nav) return;
+  window.addEventListener('scroll', () => {
+    nav.classList.toggle('scrolled', window.scrollY > 40);
+    const sections = document.querySelectorAll('section[id]');
+    let current = '';
+    sections.forEach(s => { if (window.scrollY >= s.offsetTop - 120) current = s.id; });
+    document.querySelectorAll('.nav-links a').forEach(a => {
+      a.classList.toggle('active', a.getAttribute('href') === '#' + current);
+    });
+  }, { passive: true });
+})();
+
+/* ── MOBILE NAV / HAMBURGER ── */
+(function () {
+  const toggle = document.getElementById('navToggle');
+  const drawer = document.getElementById('navDrawer');
+  if (!toggle || !drawer) return;
+  toggle.addEventListener('click', () => {
+    const open = toggle.classList.toggle('open');
+    drawer.classList.toggle('open', open);
+    document.body.style.overflow = open ? 'hidden' : '';
+    toggle.setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
+  });
+})();
+
+function closeDrawer() {
+  const toggle = document.getElementById('navToggle');
+  const drawer = document.getElementById('navDrawer');
+  toggle.classList.remove('open');
+  drawer.classList.remove('open');
+  document.body.style.overflow = '';
+  toggle.setAttribute('aria-label', 'Open menu');
+}
+
+/* ── PARALLAX HERO (desktop only) ── */
+if (window.matchMedia('(pointer:fine)').matches) {
+  window.addEventListener('scroll', () => {
+    const w = document.querySelector('.hero-image-wrap');
+    if (w) w.style.transform = `translateY(${window.scrollY * .28}px)`;
+  }, { passive: true });
+}
+
+/* ── REVEAL ON SCROLL ── */
+(function () {
+  const obs = new IntersectionObserver(entries => {
+    entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
+  }, { threshold: 0.1 });
+  document.querySelectorAll('.reveal').forEach(el => obs.observe(el));
+})();
+
+/* ── TIMELINE ITEMS ── */
+(function () {
+  const obs = new IntersectionObserver(entries => {
+    entries.forEach((e, i) => { if (e.isIntersecting) setTimeout(() => e.target.classList.add('visible'), i * 120); });
+  }, { threshold: 0.1 });
+  document.querySelectorAll('.timeline-item').forEach(el => obs.observe(el));
+})();
+
+/* ── CARDS ── */
+(function () {
+  const obs = new IntersectionObserver(entries => {
+    entries.forEach((e, i) => { if (e.isIntersecting) setTimeout(() => e.target.classList.add('visible'), i * 80); });
+  }, { threshold: 0.1 });
+  document.querySelectorAll('.exp-card, .edu-card, .trait-card').forEach(el => obs.observe(el));
+})();
+
+/* ── SKILL BARS ── */
+(function () {
+  const obs = new IntersectionObserver(entries => {
+    entries.forEach(e => {
+      if (e.isIntersecting) e.target.querySelectorAll('.skill-bar-fill').forEach(f => { f.style.width = f.dataset.width + '%'; });
+    });
+  }, { threshold: 0.3 });
+  document.querySelectorAll('.edu-skills').forEach(el => obs.observe(el));
+})();
+
+/* ── MODAL ── */
+const modalData = {
+  agri: {
+    tag: '// Agricultural Journey',
+    title: 'The <em>Agricultural</em> Story',
+    body: [
+      "Mitchelle's connection to the land began early — growing up watching communities depend on farming sparked her vocation.",
+      "She pursued the AG-ED programme at UoN Kabete, combining agronomy, soil science, crop production, and extension education methodology.",
+      "Her industrial attachments took her to county governments, research farms, and peri-urban communities — always with boots in the soil.",
+      "Today she works as a part-time agricultural officer in Nairobi, bridging the urban-rural agricultural divide."
+    ],
+    list: ['Soil Science & Land Analysis', 'Crop Production & Agronomy', 'Integrated Pest Management', 'Extension Education & Training', 'Urban & Peri-Urban Farming', 'Food Security Monitoring']
+  },
+  edu: {
+    tag: '// Education Story',
+    title: "The <em>Educator's</em> Path",
+    body: [
+      "For Mitchelle, education is not a classroom — it's a field, a baraza, a conversation between a farmer and someone who genuinely cares.",
+      "She designs practical agricultural training sessions, simplifying complex agronomy into actionable farm practices for smallholders.",
+      "Her mentorship work with secondary school students inspires the next generation to see agriculture as a profession of purpose.",
+      "Extension work means walking with farmers through every season — and that's exactly what she does."
+    ],
+    list: ['Agricultural Extension Education', 'Farmer Training & Facilitation', 'Secondary School Outreach', 'Climate-Smart Agriculture Training', 'Organic Composting Workshops', 'Water Harvesting Techniques']
+  }
+};
+
+function openModal(key) {
+  const d = modalData[key]; if (!d) return;
+  document.getElementById('modalContent').innerHTML = `
+    <button class="modal-close" onclick="closeModal()">✕</button>
+    <span class="modal-tag">${d.tag}</span>
+    <h2>${d.title}</h2>
+    ${d.body.map(b => `<p>${b}</p>`).join('')}
+    <ul>${d.list.map(l => `<li>${l}</li>`).join('')}</ul>`;
+  document.getElementById('modalOverlay').classList.add('open');
+  document.body.style.overflow = 'hidden';
+}
+function closeModal() {
+  document.getElementById('modalOverlay').classList.remove('open');
+  document.body.style.overflow = '';
+}
+(function () {
+  const overlay = document.getElementById('modalOverlay');
+  if (overlay) overlay.addEventListener('click', e => { if (e.target === overlay) closeModal(); });
+  document.addEventListener('keydown', e => { if (e.key === 'Escape') closeModal(); });
+})();
+
+/* ── FORM HANDLER ── */
+function handleSubmit(e) {
+  e.preventDefault();
+  const btn = e.target;
+  btn.textContent = 'Message Sent ✓';
+  btn.style.background = 'var(--cosmos-teal)';
+  btn.style.cursor = 'default';
+  setTimeout(() => { btn.textContent = 'Send Message →'; btn.style.background = ''; btn.style.cursor = ''; }, 3000);
+}
+
+/* ── NEWSLETTER HANDLER ── */
+function handleNewsletter(btn) {
+  const input = btn.previousElementSibling;
+  if (!input.value || !input.value.includes('@')) { input.style.borderColor = '#e55'; return; }
+  btn.textContent = 'Subscribed ✓';
+  btn.style.background = 'var(--cosmos-teal)';
+  btn.style.color = 'var(--cosmos-white)';
+  input.value = '';
+  setTimeout(() => { btn.textContent = 'Subscribe →'; btn.style.background = ''; btn.style.color = ''; }, 3500);
+}
+
+/* ── FAQ TOGGLE ── */
+function toggleFaq(btn) {
+  const item = btn.closest('.faq-item');
+  const isOpen = item.classList.contains('open');
+  document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('open'));
+  document.querySelectorAll('.faq-question').forEach(b => b.setAttribute('aria-expanded', 'false'));
+  if (!isOpen) { item.classList.add('open'); btn.setAttribute('aria-expanded', 'true'); }
+}
+
+/* ── FOOTER BUBBLES — JS rAF: float bottom→top, fade at midpoint ── */
+(function () {
+  const wrap = document.getElementById('footerBubbles');
+  if (!wrap) return;
+
+  function spawnFooterBubble() {
+    const size    = 24 + Math.random() * 90;
+    const leftPct = Math.random() * 96;
+    const dur     = 7000 + Math.random() * 8000;
+    const b = document.createElement('div');
+    b.className = 'footer-bubble';
+    b.style.cssText = `width:${size}px;height:${size}px;left:${leftPct}%;bottom:0;opacity:0;position:absolute;`;
+    wrap.appendChild(b);
+
+    const startTime = performance.now();
+    const wrapH = wrap.offsetHeight || 300;
+
+    function tick(now) {
+      const progress = Math.min((now - startTime) / dur, 1);
+      b.style.transform = `translateY(-${(wrapH + size) * progress}px)`;
+      // fade in → full → fade out at midpoint
+      let op;
+      if      (progress < 0.15) op = progress / 0.15;
+      else if (progress < 0.50) op = 1;
+      else                      op = 1 - (progress - 0.50) / 0.50;
+      b.style.opacity = op;
+      if (progress < 1) { requestAnimationFrame(tick); } else { b.remove(); }
+    }
+    requestAnimationFrame(tick);
+    setTimeout(spawnFooterBubble, 400 + Math.random() * 900);
+  }
+
+  for (let i = 0; i < 6; i++) setTimeout(spawnFooterBubble, i * 600);
+})();
+
+/* ── EDU BUBBLES — JS rAF: float bottom→top, fade at midpoint ── */
+(function () {
+  const wrap = document.getElementById('eduBubbleWrap');
+  if (!wrap) return;
+
+  function spawnEduBubble() {
+    const size    = 20 + Math.random() * 80;
+    const leftPct = Math.random() * 96;
+    const dur     = 9000 + Math.random() * 7000;
+    const b = document.createElement('div');
+    b.className = 'edu-bubble';
+    b.style.cssText = `width:${size}px;height:${size}px;left:${leftPct}%;bottom:0;opacity:0;position:absolute;`;
+    wrap.appendChild(b);
+
+    const startTime = performance.now();
+    const wrapH = wrap.offsetHeight || 400;
+
+    function tick(now) {
+      const progress = Math.min((now - startTime) / dur, 1);
+      b.style.transform = `translateY(-${(wrapH + size) * progress}px)`;
+      let op;
+      if      (progress < 0.15) op = progress / 0.15;
+      else if (progress < 0.50) op = 1;
+      else                      op = 1 - (progress - 0.50) / 0.50;
+      b.style.opacity = op;
+      if (progress < 1) { requestAnimationFrame(tick); } else { b.remove(); }
+    }
+    requestAnimationFrame(tick);
+    setTimeout(spawnEduBubble, 600 + Math.random() * 1200);
+  }
+
+  for (let i = 0; i < 5; i++) setTimeout(spawnEduBubble, i * 800);
+})();
+
+/* ── CCS AD POPUP ── */
+(function () {
+  const popup = document.getElementById('ccsAdPopup');
+  if (!popup) return;
+  function showAd() { popup.classList.add('show'); setTimeout(() => popup.classList.remove('show'), 8000); }
+  setTimeout(() => { showAd(); setInterval(showAd, 180000); }, 30000);
+})();
+
+function closeCcsAd() {
+  document.getElementById('ccsAdPopup').classList.remove('show');
+}
 </script>
 </body>
 </html>
